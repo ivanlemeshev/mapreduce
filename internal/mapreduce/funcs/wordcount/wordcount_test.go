@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ivanlemeshev/mapreduce/internal/wordcount"
+	"github.com/ivanlemeshev/mapreduce/internal/mapreduce/funcs/wordcount"
 )
 
 func TestMap(t *testing.T) {
