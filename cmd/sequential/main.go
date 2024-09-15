@@ -4,8 +4,8 @@ import (
 	"flag"
 	"log"
 
+	"github.com/ivanlemeshev/mapreduce/internal/mapreduce/funcs/wordcount"
 	"github.com/ivanlemeshev/mapreduce/internal/mapreduce/sequential"
-	"github.com/ivanlemeshev/mapreduce/internal/wordcount"
 )
 
 var (

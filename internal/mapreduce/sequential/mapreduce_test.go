@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	"github.com/ivanlemeshev/mapreduce/internal/mapreduce/funcs/wordcount"
 	"github.com/ivanlemeshev/mapreduce/internal/mapreduce/sequential"
-	"github.com/ivanlemeshev/mapreduce/internal/wordcount"
 )
 
 const (
@@ -34,4 +34,6 @@ func TestMapReduce_Process(t *testing.T) {
 	require.True(t, strings.Contains(fileContent, "World\t2"))
 	require.True(t, strings.Contains(fileContent, "again\t1"))
 	require.True(t, strings.Contains(fileContent, "MapReduce\t1"))
+
+	_ = os.Remove(testOutput)
 }

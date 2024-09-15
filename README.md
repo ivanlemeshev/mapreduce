@@ -7,11 +7,7 @@ It is based on the paper
 [MapReduce: Simplified Data Processing on Large Clusters](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
 by Jeffrey Dean and Sanjay Ghemawat from Google.
 
-I use word count as the example to implement MapReduce.
-
-- [x] Sequential implementation
-- [ ] Concurrent implementation
-- [ ] Distributed implementation
+It uses word count as the example to implement MapReduce.
 
 ## Run the sequential implementation
 
