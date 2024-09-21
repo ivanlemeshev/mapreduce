@@ -26,5 +26,3 @@ go.work.sum
 
 # Development files and directories
 data/
-output.txt
-test_output.txt

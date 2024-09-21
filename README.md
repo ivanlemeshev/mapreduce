@@ -12,5 +12,5 @@ It uses word count as the example to implement MapReduce.
 ## Run the sequential implementation
 
 ```bash
-go run main.go -input input.txt -output output.txt
+go run ./cmd/sequential/main.go -input ./data/input.txt -output ./data/output.txt
 ```
