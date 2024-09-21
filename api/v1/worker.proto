@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package mapreduce;
+
+import "common.proto";
+
+option go_package = "pkg/maprecude/api/v1";
+
+service WorkerService {
+  rpc ServerLive(ServerLiveRequest) returns (ServerLiveResponse) {}
+}

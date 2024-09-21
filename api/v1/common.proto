@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package mapreduce;
+
+option go_package = "pkg/maprecude/api/v1";
+
+message ServerLiveRequest {}
+
+message ServerLiveResponse {
+  bool isLive = 1;
+}
