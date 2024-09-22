@@ -13,7 +13,7 @@ import (
 func main() {
 	log.Println("Starting the coordinator server...")
 
-	l, err := net.Listen("tcp", ":8000")
+	l, err := net.Listen("tcp", "127.0.0.1:8000")
 	if err != nil {
 		log.Fatalln("Failed to listen:", err)
 	}
@@ -23,7 +23,7 @@ func main() {
 
 	apiv1.RegisterCoordinatorServiceServer(grpcServer, coordinatorServer)
 
-	log.Println("Coordinator server is running on port 8000...")
+	log.Println("Coordinator server is running on 127.0.0.1:8000...")
 	if err := grpcServer.Serve(l); err != nil {
 		log.Fatalln("Failed to serve:", err)
 	}

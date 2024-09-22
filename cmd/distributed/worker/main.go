@@ -13,7 +13,7 @@ import (
 func main() {
 	log.Println("Starting the worker server...")
 
-	l, err := net.Listen("tcp", ":8001")
+	l, err := net.Listen("tcp", "127.0.0.1:8001")
 	if err != nil {
 		log.Fatalln("Failed to listen:", err)
 	}
@@ -23,7 +23,7 @@ func main() {
 
 	apiv1.RegisterWorkerServiceServer(grpcServer, workerServer)
 
-	log.Println("Worker server is running on port 8001...")
+	log.Println("Worker server is running on 127.0.0.1:8001...")
 	if err := grpcServer.Serve(l); err != nil {
 		log.Fatalln("Failed to serve:", err)
 	}
