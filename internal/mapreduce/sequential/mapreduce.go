@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path/filepath"
 
 	"github.com/ivanlemeshev/mapreduce/internal/mapreduce"
 )
@@ -23,7 +24,7 @@ func New(mapReducer mapreduce.MapReducer) *MapReduce {
 // Process reads the input file, processes it using the Map and Reduce
 // functions, and writes the output to the output file.
 func (mr *MapReduce) Process(inputFilepath, outputFilepath string) error {
-	input, err := os.Open(inputFilepath)
+	input, err := os.Open(filepath.Clean(inputFilepath))
 	if err != nil {
 		return fmt.Errorf(
 			"failed to open the input file %q: %w",
@@ -33,7 +34,7 @@ func (mr *MapReduce) Process(inputFilepath, outputFilepath string) error {
 	}
 	defer input.Close()
 
-	output, err := os.Create(outputFilepath)
+	output, err := os.Create(filepath.Clean(outputFilepath))
 	if err != nil {
 		return fmt.Errorf(
 			"failed to create the output file %q: %w",
