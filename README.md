@@ -1,5 +1,10 @@
 # Implementing MapReduce in Go
 
+![Build](https://github.com/ivanlemeshev/mapreduce/actions/workflows/build.yml/badge.svg)
+![Test](https://github.com/ivanlemeshev/mapreduce/actions/workflows/test.yml/badge.svg)
+![Lint](https://github.com/ivanlemeshev/mapreduce/actions/workflows/lint.yml/badge.svg)
+![Sec](https://github.com/ivanlemeshev/mapreduce/actions/workflows/test.yml/badge.svg)
+
 An implementation of MapReduce framework in Go to learn how it works and
 and understand the concepts behind it.
 
